@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./Review.css">
+    </head>
+    <body>
+        <header class="financetracker-head">
+            <div class="inner-head">
+                <div class="finance-logo"><img src="./files/Finance Tracker_transparent.png" alt="logo"></div>
+                <div class="finance-opt">
+                    <a id="b1" href="./home.html"><button  class="header-opt wrong" ><div class="icon"><i class="fa-solid fa-house"></i></div><div>Home</div></button></a>
+                    <a href="./Gathering.html"><button onclick="navbutton()" class="header-opt" id="b2"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><div>Dashboard</div></button></a>
+                    <a href="./collect.html"><button onclick="navbutton()" class="header-opt" id="b6"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div><div>Tracker</div></button></a>
+                    <a href="./Review.html"><button onclick="navbutton()" class="header-opt" id="b3"><div class="icon"><i class="fa-solid fa-star"></i></div><div>Review</div></button></a>
+                    <a href="./about.html"><button onclick="navbutton()" class="header-opt" id="b5"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div><div>About</div></button></a>
+                    <a href="./login.html" ><button onclick="navbutton()" class="header-opt"><div>Log In</div></button></a>
+                </div>
+                <div class="menu-icon" onclick="toggle_on()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </header>
+        <div class="toggle-opt">
+            <button  class="xmark" onclick="toggle_off()"><div class="icon"></div><i class="fa-solid fa-xmark"></i></button>
+            <a href="./home.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-house"></i></div>Home</button></a>
+            <a href="./Gathering.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-chart-line"></i></div>Dashboard</button></a>
+            <a href="./collect.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div>Tracker</button></a>
+            <a href="./Review.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-star"></i></div>Review</button></a>
+            <a href="./about.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>About</button></a>
+            <a href="./login.html"><button onclick="toggle_off()"><div class="icon"></div>Log In</button></a>
+
+        </div>
+        <div class="review_main">
+            <div class="review_box">
+                <div class="review_header">What do our Users Say...?</div>
+
+                <div class="review_page">
+
+
+                    <div class="reviewer_1 anim1">
+                        <div class="reviewer_11">
+                            <div class="review_strip"></div>
+                            <div class="review_profile1"></div>
+                            
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        </div>
+                        <div class="reviewer_12">
+                            <div class="reviewer_about anima1">It's beautiful in its simplicity. You can see a list of your recent expenditures (or all of them). You can see your spending in a variety of graphs, weekly/monthly/yearly. It's great to know where your money is going.</div>
+                            <div class="reviewer_name anima1">Celia Almeda</div>
+                            <div class="reviewer_occupation anima1">Full Stack</div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="reviewer_1 anim2">
+
+                        <div class="reviewer_11">
+                            <div class="review_strip"></div>
+                            <div class="review_profile2"></div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                        <div class="reviewer_12">
+                            <div class="reviewer_about anima2">Great one!! for keeping track of finances. Love it .It keeps track of my accounts in an easy to follow, intuitive way that make sense and works right. You can add types of income and expenses</div>
+                            <div class="reviewer_name anima2">Frank Kinney</div>
+                            <div class="reviewer_occupation anima2">Financial Director</div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="reviewer_1 anim1">
+                        
+                        <div class="reviewer_11">
+                            <div class="review_strip"></div>
+                            <div class="review_profile3"></div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                        <div class="reviewer_12">
+                            <div class="reviewer_about anima1">I really like this Website and its relatively easy to use. It's more convenient for me because I always seem to lose my check book and receipts before I can write down how much I had spent or forget to do it at all..</div>
+                            <div class="reviewer_name anima1">Phoebe Nelson</div>
+                            <div class="reviewer_occupation anima1">Sales Manager  </div>
+                        </div>
+
+                    </div>
+                    <div class="reviewer_1 anim2">
+                        <div class="reviewer_11">
+                            <div class="review_strip"></div>
+                            <div class="review_profile4"></div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                        <div class="reviewer_12">
+                            <div class="reviewer_about">Best Money Tracking Website I Have Found!
+                                I absolutely LOVE this! It has a great interface, is super easy to navigate, and has so many customizing options for the categories one can create for their best budgeting possible.</div>
+                            <div class="reviewer_name">Jennie Roberts</div>
+                            <div class="reviewer_occupation">Office Manager
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container1">
+                <div class="footer-content">Not Sure what it is looking for ? Speak to a member of our dedicated team by calling</div>
+                <div class="footer-symbol">
+                    <div class="f-sec">
+                        <div class="sec-i"><i class="fa-regular fa-envelope" style="color: #b10000;" ></i></div>
+                        <div class="s-content">@gmail.com</div>
+                    </div>
+                    <div class="f-sec">
+                        <div class="sec-i"><i class="fa-duotone fa-solid fa-phone" style="color: #1d588d;" ></i></div>
+                        <div class="s-content">+91 053495732085</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="g-content">
+                    <div>Get To Know Us</div>    
+                </div>
+                <div class="l-section">
+                    <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-instagram" style="color: #E1306C"></i></div>
+                    <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-whatsapp" style="color: #075E54"></i></div>
+                    <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-facebook" style="color: #316FF6"></i></div>
+                    <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-twitter" style="color: #1DA1F2"></i></div>
+                    <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-linkedin" style="color: #0077B5"></i></div>
+                </div>
+            </div>
+        </div>
+        <script src="./Review.js"></script>
+    </body>
+</html>

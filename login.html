@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+    <title>Login and Sign-In</title>
+  </head>
+  <body>
+    <div class="t">
+      <div class="m1">
+        <div class="ls1">
+          <dotlottie-player
+            src="https://lottie.host/33e9f57c-fdd5-4c1c-a934-8361e994397a/PyCN1mGXZ9.json"
+            speed="1"
+            style="
+              width: 0%;
+              height: 100%;
+              position: absolute;
+              right: 0;
+              background-color: #00204a;
+            "
+            loop
+            autoplay
+          ></dotlottie-player>
+          <div class="h1">Log in</div>
+          <div class="U">
+            <div class="Up">Username :</div>
+            <input type="text" id="login-username" class="inputlog1" />
+          </div>
+          <div class="U">
+            <div class="Up">Password :</div>
+            <input type="password" id="login-password" class="inputlog1" />
+          </div>
+          <a href="./home.html"><button class="b1" onclick="login()">Log in</button></a>
+          <div class="F">
+            <a href="www.google.com">Forgot Password</a>
+            <div onclick="fun1()">Sign in</div>
+          </div>
+        </div>
+        <div class="ls2">
+          <dotlottie-player
+            src="https://lottie.host/33e9f57c-fdd5-4c1c-a934-8361e994397a/PyCN1mGXZ9.json"
+            speed="1"
+            style="
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              background-color: #00bbf0;
+            "
+            loop
+            autoplay
+          ></dotlottie-player>
+          <div class="h1">Sign&nbsp;in</div>
+          <table>
+            <tr>
+              <td>
+                <div class="U">
+                  <div class="Up">Username :</div>
+                </div>
+              </td>
+              <td>
+                <input type="text" id="sign-username" class="inputlog2" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="U">
+                  <div class="Up">Email-Id :</div>
+                </div>
+              </td>
+              <td>
+                <input type="email" id="sign-email" class="inputlog2" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="U">
+                  <div class="Up">Mobile Number :</div>
+                </div>
+              </td>
+              <td>
+                <input type="number" id="sign-mobile" class="inputlog2" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="U">
+                  <div class="Up">Password :</div>
+                </div>
+              </td>
+              <td>
+                <input type="password" id="sign-password" class="inputlog2" />
+              </td>
+            </tr>
+          </table>
+          <div class="F">
+            <button class="b1" onclick="signIn()">Sign in</button>
+            <div onclick="fun2()">Log in</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function fun1() {
+        var i = document.getElementsByTagName("dotlottie-player")[0];
+        i.style.width = "100%";
+        i.style.transition = "all 0.5s";
+        var j = document.getElementsByTagName("dotlottie-player")[1];
+        j.style.width = "0px";
+      }
+      function fun2() {
+        var i = document.getElementsByTagName("dotlottie-player")[0];
+        i.style.width = "0px";
+        var j = document.getElementsByTagName("dotlottie-player")[1];
+        j.style.width = "100%";
+        j.style.transition = "all 0.5s";
+      }
+
+      function signIn() {
+        var username = document.getElementById("sign-username").value;
+        var email = document.getElementById("sign-email").value;
+        var mobile = document.getElementById("sign-mobile").value;
+        var password = document.getElementById("sign-password").value;
+
+        if (username && email && mobile && password) {
+          var user = {
+            username: username,
+            email: email,
+            mobile: mobile,
+            password: password,
+          };
+
+          localStorage.setItem("user", JSON.stringify(user));
+          alert("Sign in successful!");
+          fun2();
+        } else {
+          alert("Please fill all the fields");
+        }
+      }
+
+      function login() {
+        var username = document.getElementById("login-username").value;
+        var password = document.getElementById("login-password").value;
+        var user = JSON.parse(localStorage.getItem("user"));
+
+        if (user) {
+          if (username === user.username && password === user.password) {
+            alert("Login successful!");
+          } else {
+            alert("Incorrect username or password");
+          }
+        } else {
+          alert("Account not created. Please sign in first.");
+          fun1();
+        }
+      }
+    </script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
+</html>

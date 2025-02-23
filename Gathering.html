@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Gathering.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+     
+</style>
+
+<body>
+    <header class="financetracker-head">
+        <div class="inner-head">
+            <div class="finance-logo"><img src="./files/Finance Tracker_transparent.png" alt="logo"></div>
+            <div class="finance-opt">
+                <a id="b1" href="./home.html"><button  class="header-opt wrong" ><div class="icon"><i class="fa-solid fa-house"></i></div><div>Home</div></button></a>
+                <a href="./Gathering.html"><button onclick="navbutton()" class="header-opt" id="b2"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><div>Dashboard</div></button></a>
+                <a href="./collect.html"><button onclick="navbutton()" class="header-opt" id="b6"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div><div>Tracker</div></button></a>
+                <a href="./Review.html"><button onclick="navbutton()" class="header-opt" id="b3"><div class="icon"><i class="fa-solid fa-star"></i></div><div>Review</div></button></a>
+                <a href="./about.html"><button onclick="navbutton()" class="header-opt" id="b5"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div><div>About</div></button></a>
+                <a href="./login.html" ><button onclick="navbutton()" class="header-opt"><div>Log In</div></button></a>
+            </div>
+            <div class="menu-icon" onclick="toggle_on()"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+    <div class="toggle-opt">
+        <button  class="xmark" onclick="toggle_off()"><div class="icon"></div><i class="fa-solid fa-xmark"></i></button>
+        <a href="./home.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-house"></i></div>Home</button></a>
+        <a href="./Gathering.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-chart-line"></i></div>Dashboard</button></a>
+        <a href="./collect.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div>Tracker</button></a>
+        <a href="./Review.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-star"></i></div>Review</button></a>
+        <a href="./about.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>About</button></a>
+        <a href="./login.html"><button onclick="toggle_off()"><div class="icon"></div>Log In</button></a>
+
+    </div>
+    <section class="gathering">
+        <!-- <div class="sidebar_colors"></div> -->
+        <div class="graphs">
+            <div class="bar_graph"> 
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="pie_box">
+                <div class="pie_graph">
+                    <canvas id="myChart2"></canvas>
+                </div>
+                <div class="filter">
+                    <select class="b4" id="month_num" class="month_num">
+                        
+                        <option value="1" selected>January</option>
+                        <option value="2">feb</option>
+                        <option value="3">march</option>
+                        <option value="4">April</option>
+                        <option value="5">may</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">august</option>
+                        <option value="9">sept</option>
+                        <option value="10">oct</option>
+                        <option value="11">nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+
+                    <button class="b2" onclick="change_pie(document.getElementById(`month_num`).value )">Update Pie</button>
+                </div>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="profile_box"> 
+                <div class="pic_box">
+                    <div class="pic_inner"><img src="./files/clint2.avif" alt=""></div>
+                </div>
+                <div class="pic_desc">
+                    <div><h1>Guest User</h1></div>
+                    <div><h2>Bussiness</h2></div>
+                    <div><h1>$ 929393239</h1></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container1">
+            <div class="footer-content">Not Sure what it is looking for ? Speak to a member of our dedicated team by calling</div>
+            <div class="footer-symbol">
+                <div class="f-sec">
+                    <div class="sec-i"><i class="fa-regular fa-envelope" style="color: #b10000;" ></i></div>
+                    <div class="s-content">@gmail.com</div>
+                </div>
+                <div class="f-sec">
+                    <div class="sec-i"><i class="fa-duotone fa-solid fa-phone" style="color: #1d588d;" ></i></div>
+                    <div class="s-content">+91 053495732085</div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="g-content">
+                <div>Get To Know Us</div>    
+            </div>
+            <div class="l-section">
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-instagram" style="color: #E1306C"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-whatsapp" style="color: #075E54"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-facebook" style="color: #316FF6"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-twitter" style="color: #1DA1F2"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-linkedin" style="color: #0077B5"></i></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./Gathering.js"></script>
+
+    
+</body>
+
+</html>

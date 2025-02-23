@@ -1,0 +1,259 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    margin: 0%;
+}
+
+.footer {
+    border: 2px solid black;
+    width: 100%;
+    height: 30vh;
+    background-color: #000000cb;
+    position: relative;
+
+}
+
+.container {
+    border: 2px solid transparent;
+    position: relative;
+    border-bottom-color: white;
+    width: 80%;
+    height: 20vh;
+    left: 10%;
+    color: #ffffff27;
+}
+
+.containerInner {
+    border: 2px solid transparent;
+    width: 50%;
+    height: 20vh;
+}
+
+.containerHeader {
+    border: 2px solid transparent;
+    width: 80%;
+    height: fit-content;
+    letter-spacing: 1px;
+    white-space: normal; 
+    border-bottom-color: red;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 2%;
+}
+
+.containerLogo {
+    border: 2px solid transparent;
+    width: 40%;
+    height: 12vh; 
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+.containerLogo-1 {
+    border: 2px solid transparent;
+    width: 40%;
+    height: 6vh;
+    color: white;
+    left: 5%;
+}
+
+.containerLogo-2 {
+    border: 2px solid transparent;
+    width: 40%;
+    height: 6vh; 
+    color: white;
+}
+
+.socialMedia {
+    border: 2px solid transparent;
+    width: 50%;
+    height: 15vh;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+.socialMediaHeader {
+    border: 2px solid transparent;
+    border-bottom-color: red;
+    width: 100%;
+    height: 5vh;
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+}
+
+.socialMediaBody {
+    border: 2px solid transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socialMediaLogo {
+    border: 2px solid transparent;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width : 320px ) and (max-width : 426px) {
+    .footer {
+        height: 100svh;
+        position: relative;
+        margin-left: 0px;
+    }
+
+    .container {
+        border: 2px solid transparent;
+        position: relative;
+        border-bottom-color: white;
+        width: 80%;
+        height: 80vh;
+        left: 5%;
+        color: white;
+        position: absolute;
+        top: 10%;
+    }
+
+    .containerHeader {
+        border: 2px solid transparent;
+        width: 100%;
+        height: fit-content;
+        letter-spacing: 1px;
+        white-space: normal; 
+        border-bottom-color: red;
+        font-size: 17px;
+        padding: 2%;
+        position: absolute;
+    }
+
+    .containerLogo {
+        width: 100%;
+        height: 17vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 22%;
+    }
+
+    .containerLogo-1 {
+        width: 80%;
+        height: 6vh;
+        font-size: 17px;
+        position: absolute;
+        top: 19%;
+    }
+
+    .containerLogo-2 {
+        width: 80%;
+        height: 6vh;
+        color: white;
+        font-size: 17px;
+        position: absolute;
+        top: 60%;
+        left: 5%;
+    }
+
+    .socialMedia {
+        width: 100%;
+        height: 50vh; 
+        position: absolute;
+        top: 40%;
+    }
+
+    .socialMediaHeader {
+        width: 100%;
+        height: 10vh; 
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+
+    .socialMediaBody {
+        width: 100%;
+        height: 30vh; 
+        position: absolute;
+        top: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socialMediaLogo {
+        width: 70px;
+        height: 70px;
+        font-size: 22px;
+    }
+}
+@media screen and (min-width:426px) and (max-width : 769px){
+    .footer{
+        height: 50svh;
+    }
+    .container {
+        width: 80%;
+        height: 80vh;
+        top: 10%;
+    }
+    .containerHeader {
+        width: 100%;
+        font-size: 23px;
+        padding: 2%;
+        position: absolute;
+    }
+    .containerLogo {
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 14%;
+        font-size: 20px
+    }
+    .socialMediaHeader {
+        width: 50%;
+        height: 5svh; 
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 120%;
+        left: -100%;
+    }
+    .socialMediaBody {
+        width: 200%;
+        height: 20vh; 
+        position: absolute;
+        top: 130%;
+        left: -100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .socialMediaLogo {
+        width: 70px;
+        height: 70px;
+        font-size: 22px;
+    }
+}

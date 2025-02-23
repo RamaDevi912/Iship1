@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="./collect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-refer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="financetracker-head">
+        <div class="inner-head">
+            <div class="finance-logo"><img src="./files/Finance Tracker_transparent.png" alt="logo"></div>
+            <div class="finance-opt">
+                <a id="b1" href="./home.html"><button  class="header-opt wrong" ><div class="icon"><i class="fa-solid fa-house"></i></div><div>Home</div></button></a>
+                <a href="./Gathering.html"><button onclick="navbutton()" class="header-opt" id="b2"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><div>Dashboard</div></button></a>
+                <a href="./collect.html"><button onclick="navbutton()" class="header-opt" id="b6"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div><div>Tracker</div></button></a>
+                <a href="./Review.html"><button onclick="navbutton()" class="header-opt" id="b3"><div class="icon"><i class="fa-solid fa-star"></i></div><div>Review</div></button></a>
+                <a href="./about.html"><button onclick="navbutton()" class="header-opt" id="b5"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div><div>About</div></button></a>
+                <a href="./login.html" ><button onclick="navbutton()" class="header-opt"><div>Log In</div></button></a>
+            </div>
+            <div class="menu-icon" onclick="toggle_on()"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header> 
+    <div class="toggle-opt">
+        <button  class="xmark" onclick="toggle_off()"><div class="icon"></div><i class="fa-solid fa-xmark"></i></button>
+        <a href="./home.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-house"></i></div>Home</button></a>
+        <a href="./Gathering.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-chart-line"></i></div>Dashboard</button></a>
+        <a href="./collect.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div>Tracker</button></a>
+        <a href="./Review.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-star"></i></div>Review</button></a>
+        <a href="./about.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>About</button></a>
+        <a href="./login.html"><button onclick="toggle_off()"><div class="icon"></div>Log In</button></a>
+    </div>
+    <div class="collection_main">
+        <div class="collection">
+            <div class="debit_box">
+                <div class="debit_form">
+                    <h1>Debit Tracker</h1>
+                    <form id="user-form">
+                        <label for="amount">Expense Amount:</label>
+                        <input type="number" id="amount" name="amount" required placeholder="Amount">
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" required placeholder="Description">
+                        <label for="catagory">Choose your Catagory:</label>
+                        <select id="catagory" name="catagory" required>
+                            <option value="" disabled selected>Choose Category</option>
+                            <option value="Movie">Movies</option>
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Bills">Bills</option>
+                        </select>
+                        
+                        <input class="e1" type="submit" value="Add Expense" >
+                    </form>
+                </div>
+            </div>
+            <div class="cradit">
+                <div class="credit_form">
+                    <h1>Credit Tracker</h1>
+                    <form id="user-form2">
+                        <label for="amount">Expense Amount:</label>
+                        <input class="amount" type="number" id="amount2" name="amount" required placeholder="Amount">
+                        <label for="description">Description:</label>
+                        <input class="desc" type="text" id="description2" name="description" required placeholder="Description">
+                        <label for="catagory">Choose your Catagory:</label>
+                        <select id="catagory2" name="catagory" required>
+                            <option value="" disabled selected>Choose Category</option>
+                            <option value="Movie">Movies</option>
+                            <option value="Food">Food</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Bills">Bills</option>
+                        </select>
+                        <input  class="e2" type="submit" value="Add Expense" >
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="history_box">
+                <h1>History</h1>
+                <ul id="history_list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container1">
+            <div class="footer-content">Not Sure what it is looking for ? Speak to a member of our dedicated team by calling</div>
+            <div class="footer-symbol">
+                <div class="f-sec">
+                    <div class="sec-i"><i class="fa-regular fa-envelope" style="color: #b10000;" ></i></div>
+                    <div class="s-content">@gmail.com</div>
+                </div>
+                <div class="f-sec">
+                    <div class="sec-i"><i class="fa-duotone fa-solid fa-phone" style="color: #1d588d;" ></i></div>
+                    <div class="s-content">+91 053495732085</div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="g-content">
+                <div>Get To Know Us</div>    
+            </div>
+            <div class="l-section">
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-instagram" style="color: #E1306C"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-whatsapp" style="color: #075E54"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-facebook" style="color: #316FF6"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-twitter" style="color: #1DA1F2"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-linkedin" style="color: #0077B5"></i></div>
+            </div>
+        </div>
+    </div>
+
+<script  src="./collect.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>        
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home.css">
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./files/slick-1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="./files/slick-1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <header class="financetracker-head">
+        <div class="inner-head"> 
+            <div class="finance-logo"><img src="./files/Finance Tracker_transparent.png" alt="logo"></div>
+            <div class="finance-opt">
+                <a id="b1" href="./home.html"><button  class="header-opt wrong" ><div class="icon"><i class="fa-solid fa-house"></i></div><div>Home</div></button></a>
+                <a href="./Gathering.html"><button onclick="navbutton()" class="header-opt" id="b2"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><div>Dashboard</div></button></a>
+                <a href="./collect.html"><button onclick="navbutton()" class="header-opt" id="b6"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div><div>Tracker</div></button></a>
+                <a href="./Review.html"><button onclick="navbutton()" class="header-opt" id="b3"><div class="icon"><i class="fa-solid fa-star"></i></div><div>Review</div></button></a>
+                <a href="./about.html"><button onclick="navbutton()" class="header-opt" id="b5"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div><div>About</div></button></a>
+                <a href="./login.html" ><button onclick="navbutton()" class="header-opt"><div>Log In</div></button></a>
+            </div>
+            <div class="menu-icon" onclick="toggle_on()"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+    <div class="toggle-opt">
+        <button  class="xmark" onclick="toggle_off()"><div class="icon"></div><i class="fa-solid fa-xmark"></i></button>
+        <a href="./home.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-house"></i></div>Home</button></a>
+        <a href="./Gathering.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-chart-line"></i></div>Dashboard</button></a>
+        <a href="./collect.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-magnifying-glass-dollar"></i></i></div>Tracker</button></a>
+        <a href="./Review.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-star"></i></div>Review</button></a>
+        <a href="./about.html"><button onclick="toggle_off()"><div class="icon"><i class="fa-solid fa-circle-exclamation"></i></div>About</button></a>
+        <a href="./login.html"><button onclick="toggle_off()"><div class="icon"></div>Log In</button></a>
+    </div>
+    <div class="finance-home">
+        <div class="home-content">
+            <div>
+                <div class="guest-user">Welcome,</div>
+                <div class="finance-user">Guest User</div>
+                <div class="finance-slogan">Track your finances effortlessly with our intuitive platform.</div>
+                <div class="finance-slogan"> Monitor your expenses, set budgets, and achieve your </div>
+                <div class="finance-slogan">financial goals with real-time updates and insightful analytics.</div>
+            </div>
+            <div class="finance_home_img">
+                <div class="finance-content">
+                    <div>Balance</div>
+                    <div class="tot_bal">+500</div>
+                    <div>Today</div>
+                </div>
+                <div class="finance-content">
+                    <div>Credits</div>
+                    <div class="credit_bal">+1,000</div>
+                    <div>Today</div>
+                </div>
+                <div class="finance-content">
+                    <div>Debits</div>
+                    <div>-500</div>
+                    <div>Today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="finance-cards">
+        <div class="s-card">
+            <div class="f-card1">
+                <div class="c-icon"><i class="fa-solid fa-store"></i></div>
+                <div class="c-title">Comprehensive Market Analysis</div>
+                <div class="c-desc">"Stay ahead of the curve with in-depth analysis on global markets, tailored to your investment strategy."</div>
+            </div>
+            <div class="f-card2">
+                <div class="c-icon"><i class="fa-solid fa-business-time"></i></div>
+                <div class="c-title">Real-Time Data and Insights</div>
+                <div class="c-desc">"Access up-to-the-minute financial data and insights to make informed investment decisions."</div>
+            </div>
+        </div>
+        <div class="s-card">
+            <div class="f-card3">
+                <div class="c-icon"><i class="fa-solid fa-newspaper "></i></div>
+                <div class="c-title">Latest Financial News</div>
+                <div class="c-desc">"Keep informed with the latest financial news and trends affecting your investments."</div>
+            </div>
+            <div class="f-card4">
+                <div class="c-icon"><i class="fa-solid fa-toolbox"></i></div>
+                <div class="c-title">Personalized Investment Tools</div>
+                <div class="c-desc">"Utilize our suite of tools designed to personalize your investment approach and maximize returns."</div>
+            </div>
+    
+        </div> 
+    </div>
+    <div class="footer">
+        <div class="container1">
+            <div class="footer-content">Not Sure what it is looking for ? Speak to a member of our dedicated team by calling</div>
+            <div class="footer-symbol">
+                <div class="f-sec">
+                    <div class="sec-i"><i class="fa-regular fa-envelope " style="color: #b10000;" ></i></div>
+                    <div class="s-content">@gmail.com</div>
+                </div>
+                <div class="f-sec">
+                    <div class="sec-i"><i class="fa-duotone fa-solid fa-phone" style="color: #1d588d;" ></i></div>
+                    <div class="s-content">+91 053495732085</div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="g-content">
+                <div>Get To Know Us</div>    
+            </div>
+            <div class="l-section">
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-instagram " style="color: #E1306C"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-whatsapp  " style="color: #075E54"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-facebook  " style="color: #316FF6"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-twitter  " style="color: #1DA1F2"></i></div>
+                <div id="logos" class="socialMediaLogo"><i class="fa-brands fa-linkedin  " style="color: #0077B5"></i></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./home.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $('.finance_home_img').slick({
+                    infinite:true,
+                    dots:true,
+                    autoplay:true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,     
+                    autoplaySpeed:2000,
+                    responsive:[
+                        {
+                            breakpoint:2000,
+                            settings: {
+                                slidesToShow:3,
+                                slidesToScroll:1,
+                            }
+                        },
+                        {
+                            breakpoint:1024,
+                            settings: {
+                                slidesToShow:2,
+                                slidesToScroll:1,
+                            }
+                        },
+                        {
+                            breakpoint:600,
+                            settings: {
+                                slidesToShow:1,
+                                slidesToScroll: 1,     
+                            }
+                        }
+                    ]
+                });
+            });
+    </script>
+    <script src="./collect.js"></script>
+</body>
+</html>
